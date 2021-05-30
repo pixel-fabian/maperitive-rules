@@ -445,9 +445,9 @@ rules
 					line-width : 7:1;9:2;12:3;13:7;16:10;18:12
 			define
 				min-zoom : 12
-				line-color : #849BBD
+				line-color : #efeace
 				border-style : solid
-				border-color : #849BBD black 20%
+				border-color : #efeace black 20%
 				border-width : 15%
 			draw : line
 			define
@@ -476,10 +476,10 @@ rules
 		elseif : *trunk*
 			define
 				min-zoom : 12
-				line-color : #96D296
+				line-color : #efeace
 				line-width : 11:1;13:2;15:10;18:12
 				border-style : solid
-				border-color : #96D296 black 20%
+				border-color : #efeace black 20%
 				border-width : 15%
 			for : tunnel=yes
 				define
@@ -493,10 +493,10 @@ rules
 		elseif : *primary*
 			define
 				min-zoom : 11
-				line-color : #ECA2A3
-				line-width : 11:2;12:2;15:10;18:12
+				line-color : #efeace
+				line-width : 11:1;13:2;15:10;18:12
 				border-style : solid
-				border-color : #ECA2A3 black 20%
+				border-color : #efeace black 20%
 				border-width : 15%
 			for : tunnel=yes
 				define
@@ -514,7 +514,7 @@ rules
 		elseif : *secondary
 			define
 				min-zoom : 12
-				line-color : #FDD6A4
+				line-color : #ffffff
 				line-width : 10:1;11:2;13:2;15:10;18:12
 				border-style : solid
 				border-color : #CAA36F
@@ -539,7 +539,7 @@ rules
 		elseif : *tertiary
 			define
 				min-zoom : 13
-				line-color : #FEFEB2
+				line-color : #ffffff
 				line-width : 10:1;13:2;15:10;18:12
 				border-style : solid
 				border-color : #FEFEB2 black 20%
