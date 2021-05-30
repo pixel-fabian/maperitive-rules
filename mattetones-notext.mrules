@@ -272,7 +272,7 @@ rules
 					min-zoom : 13
 					text-color : white black 50%
 					placement-value : 10
-			draw : text
+			// draw : text
 		if : aerialway station
 			define
 				min-zoom:12
@@ -283,7 +283,7 @@ rules
 				text-offset-vertical:120%
 				text-color:#8888FF
 			draw:shape
-			draw:text
+			// // draw : text
 
 
 	target : housenumber
@@ -293,7 +293,7 @@ rules
 			text-halo-width : 0
 			font-size : 8
 			placement-value : 0.01
-		draw : text
+		// draw : text
 	target : playground
 		define
 			fill-color : #CCFEF0
@@ -306,7 +306,7 @@ rules
 		define
 			min-zoom : 17
 			placement-value : 0.05
-		draw : text
+		// draw : text
 
 	target : $featuretype(area)
 		define
@@ -445,7 +445,7 @@ rules
 		if:academic
 			define
 				min-zoom:16
-		draw : text
+		// draw : text
 
 //		aeroway taxiway : aeroway=taxiway
 //		aeroway apron : aeroway=apron
@@ -469,7 +469,7 @@ rules
 		define
 			min-zoom : 10
 			text-color : #A3A3FE
-		draw : text
+		// draw : text
 
 	target : boundary*
 		define
@@ -505,7 +505,7 @@ rules
 			text-color : green
 			font-weight : normal
 		draw : line
-		draw : text
+		// draw : text
 
 	target : peak
 		define
@@ -523,7 +523,7 @@ rules
 			text-max-width : 10
 			text-offset-vertical : 100%
 			text-align-vertical : near
-		draw : text
+		// draw : text
 
 	target : info
 		define
@@ -533,7 +533,7 @@ rules
 			font-size : 20
 			font-family : Times New Roman
 			text-halo-width : 0
-		draw : text
+		// draw : text
 	target : lift_gate
 		define
 			min-zoom : 16
@@ -577,7 +577,7 @@ rules
 			line-style:solid
 			line-color:#999
 		draw:line
-		draw:text
+		// // draw : text
 	target:aerialway closed
 		define
 			min-zoom:12
@@ -627,7 +627,7 @@ rules
 			min-zoom : 15
 			text-align-horizontal : center
 			text-align-vertical : center
-		draw:text
+		// // draw : text
 
 	target : highway access*
 		define
@@ -658,7 +658,7 @@ rules
 			text-color : #849BBD
 			text-halo-width : 25%
 			text-offset-vertical : 150%
-		draw: text
+		// draw : text
 
 	target : highway*
 		define
@@ -760,7 +760,7 @@ rules
 			define
 				min-zoom : 13
 				max-zoom : 20
-			draw : text
+			// draw : text
 		elseif : *secondary
 			define
 				min-zoom : 12
@@ -785,7 +785,7 @@ rules
 			define
 				min-zoom : 13
 				max-zoom : 20
-			draw : text
+			// draw : text
 		elseif : *tertiary
 			define
 				min-zoom : 13
@@ -810,7 +810,7 @@ rules
 			define
 				min-zoom : 15
 				max-zoom : 20
-			draw : text
+			// draw : text
 		elseif : *service
 			define
 				min-zoom : 13
@@ -826,7 +826,7 @@ rules
 				define
 					border-color : #000
 			draw : line
-			draw : text
+			// draw : text
 		elseif : *pedestrian
 			for : not area
 				define
@@ -843,7 +843,7 @@ rules
 					define
 						border-color : #000
 				draw : line
-				draw : text
+				// draw : text
 
 		elseif : $regex("(.*residential)|(.*unclassified)")
 			define
@@ -869,7 +869,7 @@ rules
 			define
 				min-zoom : 15
 				max-zoom : 20
-			draw : text
+			// draw : text
 		elseif : *living_street
 			define
 				min-zoom : 13
@@ -886,7 +886,7 @@ rules
 			define
 				min-zoom : 15
 				max-zoom : 20
-			draw : text
+			// draw : text
 		elseif : *track
 			define
 				min-zoom : 12.5
@@ -920,7 +920,7 @@ rules
 				define
 					border-color : #000
 			draw : line
-			draw : text
+			// draw : text
 		elseif : *footway
 			define
 				min-zoom : 13
@@ -938,7 +938,7 @@ rules
 				define
 					border-color : #000
 			draw : line
-			draw : text
+			// draw : text
 		elseif : *cycleway
 			define
 				min-zoom : 13
@@ -957,7 +957,7 @@ rules
 					border-color : #000
 					border-opacity : 1
 			draw : line
-			draw : text
+			// draw : text
 		elseif : *path
 			define
 				min-zoom : 13
@@ -975,7 +975,7 @@ rules
 				define
 					border-color : #000
 			draw : line
-			draw : text
+			// draw : text
 		else
 			stop
 
@@ -1016,7 +1016,7 @@ rules
 			border-color : #FEFEB2 black 20%
 			border-width : 15%
 		draw : line
-		draw : text
+		// draw : text
 
 	target : historic citywalls
 		define
@@ -1024,7 +1024,7 @@ rules
 			line-color : #8D968D
 			line-width : 7:0.6;9:1;10:1.2;12:2.5;13:3;16:10
 		draw : line
-		draw : text
+		// draw : text
 
 		define
 
@@ -1038,7 +1038,7 @@ rules
 			font-size:13:8;16:12
 			text-color:#B5D0D0
 			font-weight:normal
-		draw:text
+		// // draw : text
 	target : stream
 		define
 			line-color : #B5D0D0
@@ -1049,7 +1049,7 @@ rules
 			font-size:13:8;16:12
 			text-color:#B5D0D0
 			font-weight:normal
-		draw:text
+		// // draw : text
 
 	target : canal
 		define
@@ -1062,7 +1062,7 @@ rules
 			font-size:13:8;16:12
 			text-color:#B5D0D0
 			font-weight:normal
-		draw:text
+		// // draw : text
 
 	target : drain
 		define
@@ -1096,7 +1096,7 @@ rules
 			font-size : 12
 			text-color : #7981B0
 			text-offset-vertical : -150%
-		draw : text
+		// draw : text
 	target: postbox
 		define
 			icon-image : icons/SJJB/png/amenity_post_box.p.32.png
@@ -1132,7 +1132,7 @@ rules
 			min-zoom : 16
 			text-offset-vertical : 150%
 			text-color : #DA0092
-		draw : text
+		// draw : text
 	target: police station
 		define
 			icon-image : icons/SJJB/png/amenity_police.p.32.png
@@ -1183,7 +1183,7 @@ rules
 			icon-width : 16
 		define
 			text-offset-vertical : 150%
-		draw : text
+		// draw : text
 		draw : icon
 	target: drinking water
 		define
@@ -1196,7 +1196,7 @@ rules
 			min-zoom : 17
 			text-color : #000000
 			text-offset-vertical : 150%
-		draw : text
+		// draw : text
 		define
 			icon-image : icons/SJJB/png/money_bank2.p.32.png
 			min-zoom : 16
@@ -1207,7 +1207,7 @@ rules
 			min-zoom : 17
 			text-color : #000000
 			text-offset-vertical : 150%
-		draw : text
+		// draw : text
 		define
 			icon-image : icons/SJJB/png/money_atm2.p.32.png
 			min-zoom : 16
@@ -1219,7 +1219,7 @@ rules
 			text-color : #734a08
 			text-offset-vertical : 150%
 			font-size : 10
-		draw : text
+		// draw : text
 		define
 			icon-image : icons/SJJB/png/food_restaurant.p.32.png
 			min-zoom : 16
@@ -1255,7 +1255,7 @@ rules
 			min-zoom : 17
 			text-color : #2B80FE
 			text-offset-vertical : 150%
-		draw : text
+		// draw : text
 		define
 			icon-image : icons/SJJB/png/shopping_bakery.p.32.png
 			min-zoom : 16
@@ -1266,7 +1266,7 @@ rules
 			text-color : #AA33AA
 			text-offset-vertical : 150%
 			font-size : 10
-		draw : text
+		// draw : text
 	target: tree
 		define
 			icon-image : http://svn.openstreetmap.org/applications/rendering/mapnik/symbols/tree2.png
@@ -1287,7 +1287,7 @@ rules
 		draw : icon
 		define
 			text-offset-vertical : 150%
-		draw : text
+		// draw : text
 	target : puffin
 		define
 			icon-image : icons/SJJB/png/transport_traffic_lights.p.32.png
@@ -1307,7 +1307,7 @@ rules
 			min-zoom : 17
 			text-color : #2B80FE
 			text-offset-vertical : 150%
-		draw : text
+		// draw : text
 		if : *hotel
 			define
 				icon-image : icons/SJJB/png/accommodation_hotel2.p.32.png
@@ -1334,7 +1334,7 @@ rules
 			min-zoom : 17
 			text-color : #856951
 			text-offset-vertical : 150%
-		draw : text
+		// draw : text
 
 		define
 			min-zoom : 16
