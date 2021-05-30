@@ -217,7 +217,6 @@ rules
 			fill-opacity : 0
 		draw : shape
 
-
 	target : gps routepoints
 		define
 			min-zoom : 12
@@ -227,86 +226,6 @@ rules
 			line-width : 1
 			fill-opacity : 0
 		draw : shape
-
-	target : $featuretype(point)
-		if : place*
-			define
-				font-weight : bold
-				text-max-width : 1000
-				text-align-horizontal : near
-
-			if : *city
-				define
-					font-size : 6:8;14:20
-					min-zoom : 6
-					max-zoom : 14
-					placement-value : 1000
-			elseif : *town
-				define
-					font-size : 9:8;12:10;20:20
-					min-zoom : 9
-					placement-value : 20
-			elseif : *village
-				define
-					font-size : 12:10;20:20
-					min-zoom : 12
-					placement-value : 1
-			elseif : *hamlet
-				define
-					font-size : 14:8;20:16
-					min-zoom : 14
-					placement-value : 0.1
-			elseif : *locality
-				define
-					font-size : 14:8;20:16
-					min-zoom : 14
-					placement-value : 0.1
-			elseif : *isolated_dwelling
-				define
-					font-size : 15:8;20:14
-					min-zoom : 15	
-					placement-value : 0.1
-			elseif : *suburb
-				define
-					font-size : 13:10;20:20
-					min-zoom : 13
-					text-color : white black 50%
-					placement-value : 10
-			// draw : text
-		if : aerialway station
-			define
-				min-zoom:12
-				shape:square
-				shape-size:12:3;16:8
-				fill-color:#7981B0
-				line-style:none
-				text-offset-vertical:120%
-				text-color:#8888FF
-			draw:shape
-			// // draw : text
-
-
-	target : housenumber
-		define
-			min-zoom : 17
-			text : [[addr:housenumber]]
-			text-halo-width : 0
-			font-size : 8
-			placement-value : 0.01
-		// draw : text
-	target : playground
-		define
-			fill-color : #CCFEF0
-			line-style : none
-		draw : fill
-		define
-			line-color : #ADCCB5
-			line-width : 1
-		draw : line
-		define
-			min-zoom : 17
-			placement-value : 0.05
-		// draw : text
 
 	target : $featuretype(area)
 		define
