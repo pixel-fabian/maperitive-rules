@@ -59,17 +59,17 @@ features
 		railway lightrail : railway=light_rail
 		platform : railway=platform OR public_transport=platform
 		line barrier : barrier=wall OR barrier=fence
-		highway motorway : highway=motorway OR (highway=construction AND construction=motorway)
-		highway motorway link : highway=motorway_link OR (highway=construction AND construction=motorway_link)
-		highway trunk : highway=trunk OR (highway=construction AND construction=trunk)
-		highway trunk link: highway=trunk_link OR (highway=construction AND construction=trunk_link)
-		highway primary link : highway=primary_link OR (highway=construction AND construction=primary_link)
-		highway primary : highway=primary OR (highway=construction AND construction=primary)
-		highway secondary : highway=secondary OR (highway=construction AND construction=secondary)
-		highway tertiary : highway=tertiary OR (highway=construction AND construction=tertiary)
-		highway unclassified : highway=unclassified OR (highway=construction AND construction=unclassified)
-		highway residential : highway=residential OR (highway=construction AND construction=residential)
-		highway living_street : highway=living_street OR (highway=construction AND construction=living_street)
+		highway motorway : highway=motorway
+		highway motorway link : highway=motorway_link
+		highway trunk : highway=trunk
+		highway trunk link: highway=trunk_link
+		highway primary link : highway=primary_link
+		highway primary : highway=primary
+		highway secondary : highway=secondary
+		highway tertiary : highway=tertiary
+		highway unclassified : highway=unclassified
+		highway residential : highway=residential
+		highway living_street : highway=living_street
 		highway construction : highway=construction
 		highway service : highway=service
 		highway pedestrian : highway=pedestrian
@@ -113,7 +113,7 @@ features
 properties
 	map-background-color	: #F1EEE8
 	map-background-opacity	: 1
-	map-sea-color : #B5D0D0
+	map-sea-color : #839cb3
 	font-weight : bold
 	font-family : Verdana
 	text-max-width : 7
@@ -178,7 +178,7 @@ rules
 		if : forest
 			define
 				min-zoom : 9
-				fill-color : #8DC56C
+				fill-color : #b9ceae
 		elseif : beach
 			define
 				min-zoom : 10
@@ -196,7 +196,7 @@ rules
 				fill-color : #C5FF5B black 10%
 		elseif : water
 			define
-				fill-color : #B5D0D0
+				fill-color : #839cb3
 		elseif:academic
 			define
 				fill-color : #F0F0D8
@@ -207,28 +207,28 @@ rules
 				fill-color : #DCDCDC
 		elseif : grass
 			define
-				fill-color : #CFECA8
+				fill-color : #b9ceae
 		elseif : allotments
 			define
-				fill-color : #C8B084
+				fill-color : #afc4a4
 		elseif : meadow
 			define
-				fill-color : #CFECA8
+				fill-color : #b9ceae
 		elseif : nature reserve
 			define
-				fill-color : #ABDE96
+				fill-color : #b9ceae
 		elseif : car park
 			define
 				fill-color : #F6EEB7
 		elseif : park
 			define
-				fill-color : #C0F6B0
+				fill-color : #b9ceae
 		elseif : leisure garden
 			define
-				fill-color : #CFECA8
+				fill-color : #b9ceae
 		elseif : graveyard
 			define
-				fill-color : #A9CAAE
+				fill-color : #b9ceae
 		elseif : building
 			define
 				fill-color : #BCA9A9
@@ -243,7 +243,7 @@ rules
 				fill-color : #74DCBA
 		elseif : village green
 			define
-				fill-color : #CFECA8
+				fill-color : #b9ceae
 		elseif : landuse retail
 			define
 				fill-color : #F0D9D9
@@ -355,12 +355,12 @@ rules
 
 	target : national park
 		define
-			fill-color : #8DC56C
+			fill-color : #b9ceae
 			fill-opacity : 0.2
 			line-style : none
 		draw : fill
 		define
-			line-color : #8DC56C black 20%
+			line-color : #b9ceae black 20%
 			line-opacity : 0.5
 			line-width : 3
 			line-style : dash
@@ -780,44 +780,44 @@ rules
 
 	target : river
 		define
-			line-color : #B5D0D0
+			line-color : #839cb3
 			line-width : 7:1;12:2;14:5
 		draw : line
 		define
 			min-zoom:13
 			font-size:13:8;16:12
-			text-color:#B5D0D0
+			text-color:#839cb3
 			font-weight:normal
 		// // draw : text
 	target : stream
 		define
-			line-color : #B5D0D0
+			line-color : #839cb3
 			line-width : 13:1;15:2
 		draw : line
 		define
 			min-zoom:13
 			font-size:13:8;16:12
-			text-color:#B5D0D0
+			text-color:#839cb3
 			font-weight:normal
 		// // draw : text
 
 	target : canal
 		define
 			min-zoom : 12
-			line-color : #B5D0D0
+			line-color : #839cb3
 			line-width : 12:1;17:8
 		draw : line
 		define
 			min-zoom:13
 			font-size:13:8;16:12
-			text-color:#B5D0D0
+			text-color:#839cb3
 			font-weight:normal
 		// // draw : text
 
 	target : drain
 		define
 			min-zoom : 13
-			line-color : #B5D0D0
+			line-color : #839cb3
 			line-width : 1
 		draw : line
 
@@ -845,6 +845,6 @@ rules
 
 	target: coastline
 		define
-			line-color : #B5D0D0
+			line-color : #839cb3
 			line-width : 2
 		draw : line
