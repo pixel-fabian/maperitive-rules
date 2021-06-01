@@ -103,7 +103,7 @@ features
 		gps routepoints: gpsroute[].gpspoint[]
 
 properties
-	map-background-color	: #F1EEE8
+	map-background-color	: #afc4a4
 	map-background-opacity	: 1
 	map-sea-color : #839cb3
 	font-weight : bold
@@ -248,7 +248,7 @@ rules
 				fill-color : #DCDCDC
 		elseif : orchard
 			define
-				fill-color : #9fd790
+				fill-color : #e9d8be
 		elseif : farmland
 			define
 				fill-color : #e9d8be
