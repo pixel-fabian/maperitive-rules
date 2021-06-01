@@ -4,9 +4,9 @@ Rules to style maps with [Maperitive](http://maperitive.net/).
 
 ## Rules
 
-### Matte Tones - No Text
+### 1. Matte Tones - No Text
 
-example
+![mattetones-notext.mrules](img/mattetones-notext_preview.jpg "Logo Title Text 1")
 
 mattetones-notext.mrules
 
