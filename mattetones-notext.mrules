@@ -20,7 +20,8 @@ features
 		highway secondary : highway=secondary OR highway=tertiary
 		highway residential : highway=residential OR highway=unclassified OR highway=living_street
 		hiking path : highway=footway OR highway=track OR highway=cycleway OR highway=path
-		river : waterway=river OR waterway=stream OR waterway=canal OR waterway=drain
+		river : waterway=river OR waterway=canal
+		stream : waterway=stream OR waterway=drain
 		gps tracks : gpstrack[]
 		gps routes : gpsroute[]
 
@@ -106,5 +107,11 @@ rules
 	target : river
 		define
 			line-color : #839cb3
-			line-width : 7:1;12:2;14:5
+			line-width : 5
+		draw : line
+
+	target : stream
+		define
+			line-color : #839cb3
+			line-width : 1.5
 		draw : line
