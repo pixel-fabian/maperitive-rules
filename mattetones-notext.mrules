@@ -34,21 +34,29 @@ properties
 	map-background-opacity : 1
 	map-sea-color : #839cb3
 
-
 rules
+	target : building
+		define
+			fill-color : #bca9a9
+			line-style : solid
+			line-width : 1
+			line-color : #999999
+		draw : fill
+		draw : line
+
 	target : $featuretype(area)
 		define
 			line-style : none
 			line-width : 1
-		if : forest
+		if : water
+			define
+				fill-color : #839cb3
+		elseif : forest
 			define
 				fill-color : #afc4a4
 		elseif : grass
 			define
 				fill-color : #b9ceae
-		elseif : water
-			define
-				fill-color : #839cb3
 		elseif : residential area
 			define
 				fill-color : #dcdcdc
@@ -56,15 +64,16 @@ rules
 			stop
 		draw : fill
 
-	target : building
+	target : platform
 		define
-			fill-color : #dcdcdc
-			line-style : solid
-			line-width : 1
-			line-color : #666
-		draw : fill
+			line-color : #c9b5b5
+			line-width : 3
 		draw : line
-
+	target : railway rail
+		define
+			line-color : #ccbebe
+			line-width : 2
+		draw : line
 
 	target : highway*
 		define
@@ -118,14 +127,4 @@ rules
 			line-color : #839cb3
 			line-width : 1.5
 		draw : line
-
-	target : platform
-		define
-			line-color : #c9b5b5
-			line-width : 3
-		draw : line
-	target : railway rail
-		define
-			line-color : #ccbebe
-			line-width : 2
-		draw : line
+		
