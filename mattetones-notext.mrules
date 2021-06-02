@@ -10,7 +10,8 @@ features
 
 	areas
 		forest : landuse=forest OR natural=wood OR boundary=national_park OR leisure=nature_reserve
-		grass : landuse=grass OR landuse=farm OR landuse=farmyard OR landuse=allotments OR natural=meadow OR landuse=meadow OR amenity=grave_yard OR landuse=cemetery OR leisure=park OR landuse=orchard OR landuse=farmland OR leisure=garden OR leisure=pitch OR leisure=track
+		grass : landuse=grass OR landuse=farm OR landuse=farmyard OR landuse=allotments OR natural=meadow OR landuse=meadow OR amenity=grave_yard OR landuse=cemetery OR leisure=park OR landuse=orchard OR landuse=farmland OR landuse=vineyard OR leisure=garden OR leisure=pitch OR leisure=track
+		fell : natural=fell
 		water : natural=water OR waterway=riverbank OR landuse=reservoir OR landuse=basin OR waterway=dock 
 		residential area : landuse=residential OR landuse=retail OR landuse=industrial OR landuse=commercial
 		building : building=yes
@@ -22,6 +23,8 @@ features
 		hiking path : highway=footway OR highway=track OR highway=cycleway OR highway=path
 		river : waterway=river OR waterway=canal
 		stream : waterway=stream OR waterway=drain
+		railway rail : railway=rail OR railway=light_rail
+		platform : railway=platform OR public_transport=platform
 		gps tracks : gpstrack[]
 		gps routes : gpsroute[]
 
@@ -39,7 +42,7 @@ rules
 			line-width : 1
 		if : forest
 			define
-				fill-color : #e9d8be
+				fill-color : #afc4a4
 		elseif : grass
 			define
 				fill-color : #b9ceae
@@ -114,4 +117,15 @@ rules
 		define
 			line-color : #839cb3
 			line-width : 1.5
+		draw : line
+
+	target : platform
+		define
+			line-color : #c9b5b5
+			line-width : 3
+		draw : line
+	target : railway rail
+		define
+			line-color : #ccbebe
+			line-width : 2
 		draw : line
