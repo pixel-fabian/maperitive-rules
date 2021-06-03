@@ -12,14 +12,14 @@ features
 		forest : landuse=forest OR natural=wood OR boundary=national_park OR leisure=nature_reserve
 		grass : landuse=grass OR landuse=farm OR landuse=farmyard OR landuse=allotments OR natural=meadow OR landuse=meadow OR amenity=grave_yard OR landuse=cemetery OR leisure=park OR landuse=orchard OR landuse=farmland OR landuse=vineyard OR leisure=garden OR leisure=pitch OR leisure=track
 		fell : natural=fell
-		water : natural=water OR waterway=riverbank OR landuse=reservoir OR landuse=basin OR waterway=dock 
-		residential area : landuse=residential OR landuse=retail OR landuse=industrial OR landuse=commercial
+		water : natural=water OR water=river OR waterway=riverbank OR landuse=reservoir OR landuse=basin OR waterway=dock 
+		residential area : landuse=residential OR landuse=retail OR landuse=industrial OR landuse=commercial OR highway=pedestrian OR amenity=parking OR landuse=construction
 		building : building=yes
 
 	lines
 		highway motorway : highway=motorway OR highway=trunk OR highway=primary
 		highway secondary : highway=secondary OR highway=tertiary
-		highway residential : highway=residential OR highway=unclassified OR highway=living_street
+		highway residential : highway=residential OR highway=unclassified OR highway=living_street OR highway=pedestrian
 		hiking path : highway=footway OR highway=track OR highway=cycleway OR highway=path
 		river : waterway=river OR waterway=canal
 		stream : waterway=stream OR waterway=drain
@@ -30,7 +30,7 @@ features
 
 
 properties
-	map-background-color : #00ff00
+	map-background-color : #dcdcdc
 	map-background-opacity : 1
 	map-sea-color : #839cb3
 
@@ -61,7 +61,8 @@ rules
 			define
 				fill-color : #dcdcdc
 		else
-			stop
+			define
+				fill-color : #dcdcdc
 		draw : fill
 
 	target : platform
