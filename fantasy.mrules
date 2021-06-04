@@ -22,12 +22,24 @@ features
 		railway rail : railway=rail
 		gps tracks : gpstrack[]
 
+	points
+		place city : place=city
+		place town : place=town
 
 properties
-	map-background-color : #ded2bd
+	map-background-color : #eee1cb
 	//map-background-color : transparent
 	map-background-opacity : 1
 	map-sea-color : #7390ae
+
+	font-weight : bold
+	font-family : Aniron
+	text-max-width : 7
+	text-halo-width : 20%
+	text-halo-opacity : 0.66
+	text-align-horizontal : center
+	text-align-vertical : center
+	font-stretch : 0.9
 
 rules
 	target: gps tracks
@@ -36,6 +48,20 @@ rules
 			line-opacity : 1
 			line-width : 3
 		draw : line
+
+	target: *town
+		define
+			font-size : 23:12;36:16
+			text-color : #2e0e00
+			text-offset-vertical : 150%
+		draw : text
+
+	target: *city
+		define
+			font-size : 23:28;36:36
+			text-color : #2e0e00
+			text-offset-vertical : 180%
+		draw : text
 
 	target : water
 		define
