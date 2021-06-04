@@ -10,7 +10,8 @@ features
 
 	areas
 		forest : landuse=forest OR natural=wood OR boundary=national_park OR leisure=nature_reserve
-		grass : landuse=grass OR landuse=farm OR landuse=farmyard OR landuse=allotments OR natural=meadow OR landuse=meadow OR amenity=grave_yard OR landuse=cemetery OR leisure=park OR landuse=orchard OR landuse=farmland OR landuse=vineyard OR leisure=garden OR leisure=pitch OR leisure=track
+		grass : landuse=grass OR landuse=allotments OR natural=meadow OR landuse=meadow OR amenity=grave_yard OR landuse=cemetery OR leisure=park OR landuse=vineyard OR leisure=garden OR leisure=pitch OR leisure=track
+		farmland : landuse=farmland OR landuse=orchard OR landuse=farm OR landuse=farmyard
 		fell : natural=fell
 		water : natural=water OR water=river OR waterway=riverbank OR landuse=reservoir OR landuse=basin OR waterway=dock 
 		residential area : landuse=residential OR landuse=retail OR landuse=industrial OR landuse=commercial OR highway=pedestrian OR amenity=parking OR landuse=construction
@@ -37,26 +38,37 @@ properties
 rules
 	target : building
 		define
-			fill-color : #bca9a9
+			line-style : none
+			fill-color : #c8b0ad
+		draw : fill
+
+	target : building
+		define
+			min-zoom : 15
 			line-style : solid
 			line-width : 1
 			line-color : #999999
-		draw : fill
 		draw : line
 
+	target : water
+		define
+			line-style : none
+			fill-color : #839cb3
+		draw : fill
+		
 	target : $featuretype(area)
 		define
 			line-style : none
 			line-width : 1
-		if : water
-			define
-				fill-color : #839cb3
-		elseif : forest
+		if : forest
 			define
 				fill-color : #afc4a4
 		elseif : grass
 			define
 				fill-color : #b9ceae
+		elseif : farmland
+			define
+				fill-color : #e9d8be
 		elseif : residential area
 			define
 				fill-color : #dcdcdc
