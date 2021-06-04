@@ -1,0 +1,28 @@
+
+// Rendering rules for Maperitive. Only GPS tracks.
+// http://maperitive.net
+
+// Created by pixel.fabian
+// Released under the Creative Commons Attribution-ShareAlike 3.0 License (http://creativecommons.org/licenses/by-sa/3.0/)
+
+
+features
+
+	areas
+
+	lines
+		gps tracks : gpstrack[]
+
+properties
+	// map-background-color : #ded2bd
+	map-background-color : transparent
+	map-background-opacity : 1
+	map-sea-color : #7390ae
+
+rules
+	target: gps tracks
+		define
+			line-color : #ac2222
+			line-opacity : 1
+			line-width : 3
+		draw : line

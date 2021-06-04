@@ -1,0 +1,35 @@
+
+// Rendering rules for Maperitive. Fantasy style with only few items displayed.
+// Background: Forest and residential areas
+// http://maperitive.net
+
+// Created by pixel.fabian
+// Released under the Creative Commons Attribution-ShareAlike 3.0 License (http://creativecommons.org/licenses/by-sa/3.0/)
+
+
+features
+
+	areas
+		forest : landuse=forest OR natural=wood OR boundary=national_park OR leisure=nature_reserve
+		residential area : landuse=residential OR landuse=retail OR landuse=industrial OR landuse=commercial OR highway=pedestrian OR amenity=parking OR landuse=construction
+
+properties
+	// map-background-color : #ded2bd
+	map-background-color : transparent
+	map-background-opacity : 1
+	map-sea-color : #7390ae
+
+rules	
+	target : $featuretype(area)
+		define
+			line-style : none
+			line-width : 1
+		if : forest
+			define
+				fill-color : #a5b08f
+		elseif : residential area
+			define
+				fill-color : #c0ae91
+		else
+			stop
+		draw : fill

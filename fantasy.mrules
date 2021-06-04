@@ -9,28 +9,34 @@
 features
 
 	areas
-		forest : landuse=forest OR natural=wood OR boundary=national_park OR leisure=nature_reserve
+		// forest : landuse=forest OR natural=wood OR boundary=national_park OR leisure=nature_reserve
 		water : natural=water OR water=river OR waterway=riverbank OR landuse=reservoir OR landuse=basin OR waterway=dock 
-		residential area : landuse=residential OR landuse=retail OR landuse=industrial OR landuse=commercial OR highway=pedestrian OR amenity=parking OR landuse=construction
+		// residential area : landuse=residential OR landuse=retail OR landuse=industrial OR landuse=commercial OR highway=pedestrian OR amenity=parking OR landuse=construction
 
 	lines
 		highway motorway : highway=motorway OR highway=trunk OR highway=primary
 		highway secondary : highway=secondary OR highway=tertiary
-		hiking path : highway=footway OR highway=track OR highway=cycleway OR highway=path
+		// hiking path : highway=footway OR highway=track OR highway=cycleway OR highway=path
 		river : waterway=river OR waterway=canal
 		stream : waterway=stream OR waterway=drain
 		railway rail : railway=rail
-		gps tracks : gpstrack[]
-		gps routes : gpsroute[]
+		// gps tracks : gpstrack[]
 
 
 properties
-	map-background-color : #ded2bd
-	// map-background-color : transparent
+	// map-background-color : #ded2bd
+	map-background-color : transparent
 	map-background-opacity : 1
 	map-sea-color : #7390ae
 
 rules
+	target: gps tracks
+		define
+			line-color : #ac2222
+			line-opacity : 1
+			line-width : 3
+		draw : line
+
 	target : water
 		define
 			line-style : none
