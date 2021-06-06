@@ -1,0 +1,22 @@
+//////////////////////////////////
+//  Load and export GPS track //
+//////////////////////////////////
+
+// start with empty map
+clear-map
+
+// use relative paths to script location
+use-script-dir
+
+// set ruleset (make sure alias is available)
+use-ruleset alias=gps
+
+// load gps track
+load-source ../Maps/gps_track.gpx
+
+// set bounds
+geo-bounds-use-source
+set-print-bounds-geo
+
+// export
+export-bitmap file=../output/output_gps.png zoom=11.75 dpi=600

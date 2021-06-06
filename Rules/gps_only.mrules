@@ -14,8 +14,8 @@ features
 		gps tracks : gpstrack[]
 
 properties
-	// map-background-color : #ded2bd
-	map-background-color : transparent
+	map-background-color : #00ff00
+	// map-background-color : transparent
 	map-background-opacity : 1
 	map-sea-color : #7390ae
 
