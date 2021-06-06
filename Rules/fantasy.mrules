@@ -27,7 +27,7 @@ features
 		place town : place=town
 
 properties
-	map-background-color : #f6edd8
+	map-background-color : #f9f7e7
 	// map-background-color : transparent
 	map-background-opacity : 1
 	map-sea-color : #7390ae
