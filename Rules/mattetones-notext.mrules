@@ -8,7 +8,7 @@
 
 features
 	areas
-		building : building=yes
+		building : building=yes OR building=school OR building=university
 		water : natural=water OR water=river OR waterway=riverbank OR landuse=reservoir OR landuse=basin OR waterway=dock 
 		fell : natural=fell
 		farmland : landuse=farmland OR landuse=orchard OR landuse=farm OR landuse=farmyard
