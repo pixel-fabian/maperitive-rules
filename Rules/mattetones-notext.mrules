@@ -32,7 +32,8 @@ features
 
 
 properties
-	map-background-color : #c9c9c9
+	map-background-color : #c9c9c9 
+	// map-background-color : #afc4a4 
 	map-background-opacity : 1
 	map-sea-color : #839cb3
 
@@ -145,3 +146,9 @@ rules
 			line-width : 1.5
 		draw : line
 		
+	target: gps tracks
+		define
+			line-color : #ac2222
+			line-opacity : 1
+			line-width : 3
+		draw : line
